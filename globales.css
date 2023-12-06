@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --colorFondo: #200c25;
+  --colorFondoClaro: #413045;
+  --colorLetra: #feae02;
+  --colorLetraClara: #febe35;
+  --colorSecundario: #ead26c;
+  --colorTerciario: #52281e;
+}
