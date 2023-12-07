@@ -1,0 +1,66 @@
+@keyframes efecto {
+  0% {
+    box-shadow: 2px 2px 16px var(--colorSecundario);
+  }
+  50% {
+    box-shadow: 2px 2px 16px var(--colorTerciario);
+  }
+  100% {
+    box-shadow: 2px 2px 16px var(--colorSecundario);
+  }
+}
+
+.contenedor {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--colorFondo);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.login {
+  display: flex;
+  background-color: var(--colorFondoClaro);
+  padding: 32px;
+  width: 300px;
+  flex-direction: column;
+  border-radius: 16px;
+  animation: efecto 2s ease-in infinite forwards;
+}
+
+.login > * {
+  margin-bottom: 16px;
+}
+.titulo {
+  color: var(--colorLetraClara);
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.input {
+  padding: 8px;
+  font-size: 1.2rem;
+  border: none;
+  color: var(--colorLetraClara);
+  border-bottom: 1px solid #eee;
+  background: transparent;
+}
+
+.input::placeholder {
+  color: var(--colorSecundario);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.boton {
+  background-color: var(--colorLetraClara);
+  border: transparent;
+  border-radius: 8px;
+  padding: 8px 0;
+  margin-top: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
