@@ -7,8 +7,12 @@ boton.addEventListener("click", () => {
 });
 
 input.addEventListener("keypress", (evento) => {
-  if (evento.key === "Enter") {
+  if (evento.key === "Enter" && !mensajeVacio(input.value)) {
     mensajes.textContent += input.value + "\n";
-    input.value =""
+    input.value = "";
   }
 });
+
+function mensajeVacio(cadena) {
+  return cadena.trim() === "";
+}
