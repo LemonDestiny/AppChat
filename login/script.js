@@ -1,6 +1,11 @@
 const titulo = document.getElementById("titulo");
-let textoTitulo = "Bienvenido señor";
+const userInput = document.getElementById("usuario");
+const passwordInput = document.getElementById("password");
+const logeoBtn = document.getElementById("logearse");
 
+let textoTitulo = "Bienvenido señor";
+const usuario = "Ignacio";
+const password = "lestrada";
 const wait = (ms) => {
   return new Promise((success) => setInterval(success, ms));
 };
@@ -10,6 +15,15 @@ const mostrarTitulo = async () => {
     titulo.textContent += letra;
   }
 };
+const logear = () => {
+  if (userInput.value === usuario && passwordInput.value === password) {
+    alert("Bienvenido Ignacio");
+  } else {
+    alert("El usuario o la contraseña son incorrectos :c");
+  }
+};
+
 window.onload = () => {
   mostrarTitulo();
+  logeoBtn.addEventListener("click", logear);
 };
