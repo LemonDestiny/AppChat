@@ -50,6 +50,10 @@
   resize: none;
   color: var(--colorLetra);
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  
+  
 }
 
 .contenedorInput {
@@ -100,8 +104,11 @@
 
 .personal {
   padding-left: 8px;
+  width: 400px;
 }
 .otraPersona {
+  align-self: flex-end;
   text-align: end;
   padding-right: 8px;
+  width: 400px;
 }
