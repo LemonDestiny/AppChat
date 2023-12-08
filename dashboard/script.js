@@ -6,16 +6,18 @@ let plantilla = `<div class={clase}>
                   <p>{mensaje}</p>
                 </div>`;
 
+let apiKey = "0TgaqcA4YfBR8wVmzr6rqQ==paAxO6YABQgxxzrQ";
+
 boton.addEventListener("click", () => {
   remplazaMensaje("personal", input.value, "Me");
   remplazaMensaje("otraPersona", "hola carlos todo bien", "Ricardo");
 });
 
-input.addEventListener("keypress", (evento) => {
+input.addEventListener("keypress", async (evento) => {
   if (evento.key === "Enter" && !mensajeVacio(input.value)) {
     remplazaMensaje("personal", input.value, "Me");
-    remplazaMensaje("otraPersona", "hola carlos todo bien", "Ricardo");
     input.value = "";
+    remplazaMensaje("otraPersona", await obtenerFrase(), "Ricardo");
   }
 });
 
@@ -28,8 +30,16 @@ function remplazaMensaje(clase, mensaje, persona) {
     .replace("{mensaje}", mensaje)
     .replace("{nombre}", persona)
     .replace("{clase}", clase);
-  let contenedor = document.createElement("div");
-  contenedor.innerHTML = mensajeNuevo;
-  mensajes.appendChild(contenedor);
+  //let contenedor = document.createElement("div");
+  mensajes.innerHTML += mensajeNuevo;
+  //mensajes.appendChild(contenedor);
   mensajes.scrollTo(0, mensajes.scrollHeight);
+}
+
+async function obtenerFrase() {
+  let respuestaApi = await fetch("https://api.api-ninjas.com/v1/chucknorris", {
+    headers: { "X-Api-Key": apiKey },
+  });
+  let frase = await respuestaApi.json();
+  return frase.joke;
 }
