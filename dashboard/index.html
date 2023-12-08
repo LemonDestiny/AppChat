@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../globales.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../globales.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="contenedor">
-        <div class="logo">
-            <img src="../Default_simple_logo_of_a_cat_colorfull_1_b26c1c38-2230-408e-bc35-7f761d39018d_0.png" alt="">
-        </div>
-        <div class="contenedorArea">
-            <div class="areaChat">
-                <textarea disabled id="historial"></textarea>
-    
+      <div class="logo">
+        <img
+          src="../Default_simple_logo_of_a_cat_colorfull_1_b26c1c38-2230-408e-bc35-7f761d39018d_0.png"
+          alt=""
+        />
+      </div>
+      <div class="contenedorArea">
+        <div class="areaChat">
+          <div id="historial">
+            <div class="mensaje">
+              <p></p>
             </div>
-            <div class="contenedorInput">
-                <input class="input" type="text" placeholder="Escribe algo para comenzar a chatear">
-                <div class="contenedorIcono">
-                    <i id="botonEnviar" class="fa-solid fa-arrow-up-from-bracket boton"></i>
-                </div>
-            </div>
-
+          </div>
         </div>
-
+        <div class="contenedorInput">
+          <input
+            class="input"
+            type="text"
+            placeholder="Escribe algo para comenzar a chatear"
+          />
+          <div class="contenedorIcono">
+            <i
+              id="botonEnviar"
+              class="fa-solid fa-arrow-up-from-bracket boton"
+            ></i>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="https://kit.fontawesome.com/8a3f0cccd4.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/8a3f0cccd4.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
